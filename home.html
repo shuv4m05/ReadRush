@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadRush</title>
+    <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="screen active" id="home">
+        <div class="card">
+            <div class="header">
+                <h1>How fast can you read?</h1>
+                <h2>One word at a time. You decide the limit.</h2>
+            </div>
+
+            <div class="mid">
+                <div class="oj">OBJECTIVE:</div>
+                <p>
+                    Find your maximum comfortable reading speed using a focused,
+                    one-word-at-a-time reading challenge.
+                </p>
+            </div>
+
+            <div class="rules">
+                <div class="r">RULES:</div>
+                <ol>
+                    <li>Words appear one at a time on the screen.</li>
+                    <li>Adjust the reading speed at any moment.</li>
+                    <li>Stop when it becomes too fast to read clearly.</li>
+                    <li>Your speed is measured in words per minute (WPM).</li>
+                </ol>
+            </div>
+
+            <button onclick="goToSetup()">GO</button>
+        </div>
+    </div>
+
+    <!-- SETUP SCREEN -->
+    <div class="screen" id="setup">
+        <div class="card">
+            <div class="setup">Setup Your Test</div>
+            <!--<div class="desc">
+                <div>DIFFICULTY:</div>
+                <div>Affects word complexity, not reading speed</div>
+            </div>
+            <div class="btn-group">
+                <button>Easy</button>
+                <button>Medium</button>
+                <button>Hard</button>
+            </div>-->
+            <div class="desc">
+                <div>WORD SPEED:
+                    <span id="wpmValue">200</span> WPM
+                </div>
+                <div>You can change this anytime during the test</div>
+            </div>
+
+
+            <div class="speed-control">
+                <span class="label">100</span>
+
+                <input type="range" id="speedSlider" min="100" max="1000" value="200" step="10" />
+
+                <span class="label">1000</span>
+            </div>
+
+            <div class="holder">
+                <div id="wordDisplay" class="word"></div>
+            </div>
+
+            <div class="buttonSet">
+                <button id="beginBtn">START</button>
+                <button id="pauseBtn">PAUSE</button>
+            </div>
+
+            <button id="doneBtn">SEE RESULT</button>
+            <button id="backBtn">BACK TO HOME</button>
+
+        </div>
+    </div>
+
+    <div class="screen" id="result">
+        <div class="card">
+            <div class="result">Your Result</div>
+            <p id="resultText" class="desc"></p>
+            <button id="backToSetupBtn">BACK</button>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
