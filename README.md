@@ -17,7 +17,7 @@ discover their maximum comfortable reading speed.
 - Vanilla JavaScript
 
 ## Live Demo
-(Coming soon)
+https://readrush-home.netlify.app/
 
 ---
 
